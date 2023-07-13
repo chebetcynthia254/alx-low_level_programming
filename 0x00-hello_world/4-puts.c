@@ -1,6 +1,8 @@
 #include <stdio.h>
-/*
- *My C program in Alx
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
