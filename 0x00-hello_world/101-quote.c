@@ -7,13 +7,7 @@
 */
 int main(void)
 {
-CStr  message = "and that piece of art is useful\" -*Dora Korpar, 2015-10-19\n";
-ssize_t bytes_written = write(STDERR_FILENO, message, strlen(message));
-if (bytes_written == -1)
-{
-write(STDERR_FILENO, ERR_MSG, sizeof(ERR_MSG) - 1);
+char *message = "and that piece of art is useful\"- Dora Korpar, 2015-10-19\n";
+write(2, message, 59);
 return (1);
 }
-return (1);
-}
-
