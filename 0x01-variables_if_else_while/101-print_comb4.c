@@ -4,6 +4,7 @@
 *
 * Return: 0 on successful execution
 */
+#include <stdio.h>
 int main(void)
 {
 int i, j, k;
