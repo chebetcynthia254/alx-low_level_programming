@@ -13,3 +13,8 @@ letter++;
 }
 putchar('\n');
 }
+int main()
+{
+print_alphabet();
+return(0);
+}
