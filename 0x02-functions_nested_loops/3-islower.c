@@ -4,12 +4,15 @@
 *
 * Return: Always 0.
 */
-void print_alphabet(void)
+int _islower(int c)
 {
-int i;
-for (i = 0; i < 26; i++) 
+if (c >= 97 && c <=122)
 {
-_putchar('a' + i);
+return (i);
+}
+else
+{
+return (0);
 }
 _putchar('\n');
 }
