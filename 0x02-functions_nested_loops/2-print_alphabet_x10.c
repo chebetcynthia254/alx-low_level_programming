@@ -1,8 +1,7 @@
 #include "main.h"
 /**
-*_putchar - writes the character c to stdout.
-*Return: Always 0.
-*/
+ * print_alphabet_x10 - Prints the lowercase alphabet 10 times.
+ */
 void print_alphabet_x10(void)
 {
 int count;
