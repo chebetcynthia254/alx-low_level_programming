@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 /**
 * main - check the code
 *
@@ -6,11 +6,10 @@
 */
 void print_alphabet(void)
 {
-char letter = 'a';
-for (letter <= 'z')
+int i;
+for (i = 97; i <= 122; i++)
 {
-putchar(letter);
-letter++;
+putchar(i);
 }
 putchar('\n');
 }
