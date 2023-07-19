@@ -3,7 +3,7 @@
 * times_table - Prints the 9 times table.
 */
 void times_table(void)
-{    
+{
 int i, j, result;
 for (i = 0; i <= 9; i++)
 {
@@ -16,9 +16,9 @@ printf("%2d", result);
 }
 else
 {
-_putchar(", %2d", result);
+printf(", %2d", result);
 }
 }
-_putchar("\n");
+printf("\n");
 }
 }
