@@ -1,9 +1,8 @@
 #include "main.h"
 /**
-*_isalpha - shows 1 if the input is a
-*letter Another character shows 0
-*c: the character in ANCII code
-*Return: 1 for letters o for the rest
+*_isalpha - checks for alphabetic character
+*@c: the character to be checked
+*Return: 1 for alphabetic and 0 for anything
 */
 int _isalpha(int c)
 {
