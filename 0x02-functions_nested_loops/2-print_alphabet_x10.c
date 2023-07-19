@@ -9,11 +9,11 @@ char ch;
 i = 0;
 while (i < 10)
 {
-for (ch = 0; ch < 10; ch++)
+for (ch ='a'; ch < 'z'; ch++)
 {
 _putchar(ch);
 }
 _putchar('\n');
-i++
+i++;
 }
 }
