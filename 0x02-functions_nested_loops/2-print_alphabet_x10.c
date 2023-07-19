@@ -13,8 +13,8 @@ while (letter <= 'z')
 {
 _putchar(letter);
 letter++;
-break;
 }
 }
 _putchar('\n');
+break;
 }
