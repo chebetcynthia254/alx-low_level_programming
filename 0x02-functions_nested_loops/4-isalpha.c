@@ -2,7 +2,7 @@
 /**
  * _isalpha -shows 1 if the input is a
  * letter another cases shows 0
- *the character in ANCII
+ *c: An integer representing the ASCII value of the character to be checked.
  * Return:1 for letters 0 for the rest
  */
 int _isalpha(int c)
