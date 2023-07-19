@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * main - print_sign
  *
  * Return: Always 0.
  */
