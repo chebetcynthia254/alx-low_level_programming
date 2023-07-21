@@ -1,5 +1,5 @@
 #include "main.h"
-#include <unistd.h>
+#include <stdio.h>
 /**
  * print_diagonal - draws a diagonal line according to the parameter
  * @n: the number of times to print the diagonal line
