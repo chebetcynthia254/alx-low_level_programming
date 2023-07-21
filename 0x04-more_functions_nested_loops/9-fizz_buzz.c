@@ -3,8 +3,9 @@
  * main -prints number from 1 to 100
  * Return: Always 0 (success)
  */
-int main()
+int main(void)
 {
+int i;
 for (int i = 1; i <= 100; i++)
 {
 if (i % 3 == 0 && i % 5 == 0)
