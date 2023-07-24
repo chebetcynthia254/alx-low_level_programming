@@ -1,34 +1,29 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
-
 /**
- * generate_password - Generates random valid passwords
- * for the program 101-crackme
- * Return: The generated password as a string.
+ * main - program that generates random valid
+ * paswords for the program 101-crackme
+ * Return: Always 0.
  */
-char *generate_password(void)
+int _atoi(char *s)
 {
-const char valid_chars[] = "abcdefghijklmnopqrstuvYZ0123456789";
-const int valid_chars_count = sizeof(valid_chars) - 1;
-char *password = (char *)malloc(9 * sizeof(char));
-if (password == NULL)
-{
-fprintf(stderr, "Memory allocation failed\n");
-exit(EXIT_FAILURE);
-}
-for (int i = 0; i < 8; i++)
-{
-password[i] = valid_chars[rand() % valid_chars_count];
-}
-password[8] = '\0';
-return (password);
-}
-int main(void)
-{
+int pass[100];
+int i, sum;
+sum = 0;
 srand(time(NULL));
-char *password = generate_password();
-printf("Generated password: %s\n", password);
-free(password);
+for (i = 0; i < 100; i++)
+{
+pass[i] = rand() % 77;
+sum += (pass[i] + '0');
+putchar (pass[i] + '0');
+if ((2772 - sum) < 78)
+{
+int n = 2772 - sum;
+sum += n;
+putchar(n + '0');
+break;
+}
+}
 return (0);
 }
