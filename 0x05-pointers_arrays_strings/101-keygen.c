@@ -9,14 +9,14 @@
 int _atoi(char *s)
 {
 int pass[100];
-int i, sum;
+int i, n, sum;
 sum = 0;
 srand(time(NULL));
 for (i = 0; i < 100; i++)
 {
-pass[i] = rand() % 77;
+pass[i] = rand() % 78;
 sum += (pass[i] + '0');
-putchar (pass[i] + '0');
+putchar (pass[i] - '0');
 if ((2772 - sum) < 78)
 {
 int n = 2772 - sum;
