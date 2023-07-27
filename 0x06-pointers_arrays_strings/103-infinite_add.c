@@ -1,48 +1,72 @@
 #include "main.h"
-#include "inite_add.h"
-#include <stdio.h>
-/**
- * print_buffer - prints buffer
- * @b: buffer
- * @size: size of buffer
- * Return: void
- */
-void print_buffer(char *b, int size)
-{
-int o, j, i;
-o = 0;
 
-if (size <= 0)
+/**
+ * rev_string - reverse array
+ * @n: integer params
+ * Return: 0
+ */
+void rev_string(char *n)
 {
-printf("\n");
-return;
+int i = 0;
+int j = 0;
+char temp;
+while (*(n + i) != '\0')
+{
+i++;
 }
-while (size > 0)
+j--;
+for (j = 0; j < i; j++, i--)
 {
-j = size < 10 ? size : 10;
-printf("%08x: ", o);
-for (i = 0; i < 10; i++)
+temp = *(n + j);
+*(n + j) = *(n + i);
+*(n + i) = temp;
+}
+}
+/**
+ * infinite_add - add 2 numbers together
+ * @n1: text representation of 1st number to add
+ * @n2: text representation of 2nd number to add
+ * @r: pointer to buffer
+ * @size_r: buffer size
+ * Return: pointer to calling function
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-if (i < j)
-printf("%02x", *(b + o + i));
+int overflow = 0, i = 0, j = 0, digits = 0;
+int val1 = 0, val2 = 0, temp_tot = 0;
+while (*(n1 + i) != '\0')
+i++;
+while (*(n2 + j) != '\0')
+j++;
+i--;
+j--;
+if (j >= size_r || i >= size_r)
+return (0);
+while (j >= 0 || i >= 0 || overflow == 1)
+{
+if (i < 0)
+val1 = 0;
 else
-printf(" ");
-if (i % 2)
-{
-printf(" ");
+val1 = *(n1 + i) -'0';
+if (j < 0)
+val2 = 0;
+else
+val2 = *(n2 + j) -'0';
+temp_tot = val1 + val2 + overflow;
+if (temp_tot >= 10)
+overflow = 1;
+else
+overflow = 0;
+if (digits >= (size_r - 1))
+return (0);
+*(r + digits) = (temp_tot % 10) + '0';
+digits++;
+j--;
+i--;
 }
-}
-for (i = 0; i < j; i++)
-{
-int c = *(b + o + i);
-if (c < 32 || c > 126)
-{
-c = '.';
-}
-printf("%c", c);
-}
-printf("\n");
-o += 10;
-size -= j;
-}
+if (digits == size_r)
+return (0);
+*(r + digits) = '\0';
+rev_string(r);
+return (r);
 }
