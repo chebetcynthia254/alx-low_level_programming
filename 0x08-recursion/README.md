@@ -18,3 +18,7 @@ Write a function that prints a string in reverse.
 we wake up that we realize something was actually strange
 
 Write a function that returns the length of a string.
+
+3. You mustn't be afraid to dream a little bigger, darling 
+
+Write a function that returns the factorial of a given number.
