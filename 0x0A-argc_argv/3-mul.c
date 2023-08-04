@@ -23,7 +23,7 @@ if (s[i] == '-')
 ++d;
 if (s[i] >= '0' && s[i] <= '9')
 {
-digit = s[i]- '0';
+digit = si[i] - '0';
 if (d % 2)
 digit = -digit;
 n = n * 10 + digit;
