@@ -1,11 +1,10 @@
 #include <stdlib.h>
 #include "main.h"
-
 /**
- * argstostr - concatenate command-line arguments into a single string
- * @ac: number of arguments
- * @av: array of arguments
- * Return: pointer to the concatenated string
+ * argstostr - main entry
+ * @ac: int input
+ * @av: double pointer array
+ * Return: 0
  */
 char *argstostr(int ac, char **av)
 {
@@ -19,18 +18,20 @@ for (n = 0; av[i][n]; n++)
 l++;
 }
 l += ac;
-str = malloc(sizeof(char) * (l + 1));
+str = malloc(sizeof(char) * l + 1);
 if (str == NULL)
 return (NULL);
 for (i = 0; i < ac; i++)
 {
 for (n = 0; av[i][n]; n++)
+{
 str[r] = av[i][n];
 r++;
 }
-str[r] = '\n';
-r++;
+if (str[r] == '\0')
+{
+str[r++] = '\n';
 }
-str[r] = '\0';
+}
 return (str);
 }
