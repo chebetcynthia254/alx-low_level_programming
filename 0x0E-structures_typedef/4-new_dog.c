@@ -8,7 +8,7 @@
  */
 int _strlen(char *s)
 {
-int i'
+int i;
 i = 0;
 while (s[i] != "\0")
 {
@@ -40,7 +40,7 @@ dest[i] = "\0";
 }
 
 /**
- * new_dog - creates a new dog
+ * new_dog -new dog to be created
  * @name: name of the dog
  * @age: age of the dog
  * @owner: owner of the dog
